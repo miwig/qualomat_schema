@@ -1,0 +1,19 @@
+[package]
+name = "qualomat_schema"
+version = "0.1.0"
+edition = "2021"
+repository = "https://github.com/miwig/qualomat_schema"
+license = "AGPL-3.0-or-later"
+authors = ["Michael Wigard <michael@wigard.de>"]
+description = "Rust bindings for the *Qual-O-Mat* open data format for the german voting advice tool *Wahl-O-Mat*"
+keywords = ["wahlomat", "wahl-o-mat", "elections", "politics", "germany"]
+categories = ["api-bindings", "data-structures", "science"]
+
+[dependencies]
+chrono = { version = "0.4.38", features = ["serde"] }
+serde = { version = "1.0.201", features = ["derive"] }
+serde_json = "1.0.117"
+thiserror = "1.0.60"
+
+[workspace]
+members = ["qualomat_schema_gen"]
